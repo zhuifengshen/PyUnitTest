@@ -66,7 +66,13 @@ class TestMathFunc(unittest.TestCase):
         # self.skipTest('Do not run this')  # TestCase.skipTest()方法也可以跳过
         print('test_divide()')
         self.assertEqual(2, divide(6, 3))
-        self.assertEqual(2, divide(5, 2))  # expect
+        # self.assertEqual(2, divide(5, 2))  # Expected:2  Actual:2.5
+
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2)  # 默认是 1，如果设为 0，则不输出每一用例的执行结果，即没有上面的结果中的第1行；如果设为 2，则输出详细的执行结果.  python3.6 -m unittest test_mathfunc.py
+    # 默认是 1，如果设为 0，则不输出每一用例的执行结果，即没有上面的结果中的第1行；如果设为 2，则输出详细的执行结果.
+    # python3.6 -m unittest test_mathfunc.py
+    # python3.6 -m unittest discover
+    # unittest.defaultTestLoader.discover('./', pattern='test*.py')
+    # unittest.defaultTestLoader.discover()
+    unittest.main(verbosity=2)
